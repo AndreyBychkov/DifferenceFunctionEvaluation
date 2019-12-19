@@ -18,6 +18,9 @@ class Mesh:
         self._mesh = np.zeros((self.n_t, self.n_x))
         self._mesh.fill(np.nan)
 
+    def get_mesh(self):
+        return self._mesh.copy()
+
     def set_initial_condition(self, x_0, x_end, t_0):
         self._mesh[0] = t_0
         self._mesh[:, 0] = x_0
